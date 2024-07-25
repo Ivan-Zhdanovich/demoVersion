@@ -1,12 +1,10 @@
-import { EnterModal } from "../../components/enterModal/enterModal"
-import style from "./AboutPage.module.scss"
+import style from "./aboutPage.module.scss";
 
 export const AboutPage = () => {
-    return(
-        <>
-        <h1>Тестовое задание</h1>
-        <EnterModal open={true} />
-        </>
-        
-    )
-}
+  return (
+    <div className={style.aboutPageContainer}>
+      <h1 className={style.aboutPageTitle}>Тестовое задание.</h1>
+      <p>Сделал Жданович Иван за 35 часов.</p>
+    </div>
+  );
+};

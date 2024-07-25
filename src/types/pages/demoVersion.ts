@@ -7,5 +7,5 @@ export interface IEnterModal {
     email?: string;
     phone?: string;
     open: boolean;
-    toggle?: () => void;
+    close: () => void;
 }

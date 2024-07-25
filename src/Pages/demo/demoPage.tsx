@@ -1,21 +1,26 @@
-import style from "./demoPage.module.scss";
-import { ArrowIcon } from "../../assets/demoVersion/arrowIcon";
-import ComputerIcon from "../../assets/demoVersion/computerIcon.png"
-import { EnterModal } from "../../components/enterModal/enterModal";
 import { useState } from "react";
 
+import { ArrowIcon } from "../../assets/demoVersion/arrowIcon";
+import ComputerIcon from "../../assets/demoVersion/computerIcon.png";
+import { EnterModal } from "../../components/enterModal/enterModal";
+
+import style from "./demoPage.module.scss";
+
 export const DemoPage = () => {
+  const [isEnterModalShown, setIsEnterModalShown] = useState(false);
 
-const [isEnterModalShown, setIsEnterModalShown] = useState(false);
+  const onTryButtonClick = () => {
+    setIsEnterModalShown(true);
+  };
 
-const onTryButtonClick = () => {
-  setIsEnterModalShown(true)
-}
+  const closeEnterModal = () => {
+    setIsEnterModalShown(false);
+  };
 
   return (
     <div className={style.demoVersionWrap}>
       <div className={style.demoVersionContainer}>
-        <EnterModal open={isEnterModalShown}/>
+        <EnterModal open={isEnterModalShown} close={closeEnterModal} />
         <div className={style.demoVersion__content}>
           <h1 className={style.demoVersion__content__title}>Демо-версия</h1>
           <p className={style.demoVersion__content__subtitle}>
@@ -29,7 +34,11 @@ const onTryButtonClick = () => {
             <ArrowIcon classNames={style.arrowIcon} />
           </button>
         </div>
-        <img className={style.computerIcon1} src={ComputerIcon} alt="computer"/>
+        <img
+          className={style.computerIcon1}
+          src={ComputerIcon}
+          alt="computer"
+        />
       </div>
     </div>
   );

@@ -3,9 +3,9 @@ import { CloseCrossIcon } from "../../assets/demoVersion/closeCrossIcon";
 import { IEnterModal } from "../../types/pages/demoVersion";
 import style from "./enterModal.module.scss";
 
-export const EnterModal = ({ email, open }: IEnterModal) => {
+export const EnterModal = ({ open, close }: IEnterModal) => {
   return (
-    <dialog open={open} className={style.backgroundModal}>
+    <dialog open={open} className={style.backgroundModal} onClick={close}>
       <div
         onClick={(e) => e.stopPropagation()}
         role="textbox"
@@ -23,13 +23,21 @@ export const EnterModal = ({ email, open }: IEnterModal) => {
             </label>
           </form>
           <div className={style.checkboxWrap}>
-          <CheckboxIcon classNames={style.checkboxIcon} />
+            <CheckboxIcon classNames={style.checkboxIcon} />
             <p className={style.checkBoxTitle}>Запомнить пароль</p>
           </div>
           <button className={style.restoreButton}>Восстановить</button>
           <div className={style.enterModal__form__buttons__wrap}>
-            <input type="submit" className={style.enterModal__form__button} value="Войти" />
-            <input type="submit" className={style.enterModal__form__button} value="Зарегестрироваться" />
+            <input
+              type="submit"
+              className={style.enterModal__form__button}
+              value="Войти"
+            />
+            <input
+              type="submit"
+              className={style.enterModal__form__button}
+              value="Зарегистрироваться"
+            />
           </div>
         </div>
       </div>

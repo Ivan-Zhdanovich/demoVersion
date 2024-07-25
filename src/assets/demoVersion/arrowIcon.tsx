@@ -15,16 +15,16 @@ export const ArrowIcon = ({ classNames }: IIconProps) => {
       <path
         d="M17 17H27V27"
         stroke="#1F4284"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M17 27L27 17"
         stroke="#1F4284"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
