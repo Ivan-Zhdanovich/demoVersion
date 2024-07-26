@@ -39,7 +39,7 @@
 .enterModal__form__row {
   display: flex;
   align-items: center;
-  width: 452px;
+  width: 442px;
   height: 74px;
   border: none;
   border-radius: 10px;
@@ -51,22 +51,16 @@
   color: rgba(31, 66, 132, 1);
 }
 
-.checkboxWrap {
-  display: flex;
-  margin-top: 4px;
-  margin-left: 20px;
-}
 .checkBoxTitle {
   font-size: 18px;
   line-height: 24.59px;
   margin-left: 20px;
 }
-
-.checkboxIcon {
+.checkBox {
   width: 24px;
   height: 24px;
-  margin-top: 16px;
-  margin-left: 8px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .restoreButton {
@@ -76,8 +70,7 @@
   color: rgba(36, 76, 152, 1);
   border: none;
   cursor: pointer;
-  margin-bottom: 30px;
-  margin-left: 18px;
+  margin: 26px 20px;
 }
 
 .enterModal__form__buttons__wrap {

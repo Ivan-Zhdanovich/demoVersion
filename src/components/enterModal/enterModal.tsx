@@ -30,9 +30,11 @@ export const EnterModal = ({ open, close }: IEnterModal) => {
               placeholder="Пароль"
             />
           </form>
-          <div className={style.checkboxWrap}>
-            <CheckboxIcon classNames={style.checkboxIcon} />
-            <p className={style.checkBoxTitle}>Запомнить пароль</p>
+          <div>
+            <input type="checkbox" id="checkbox" className={style.checkBox} />
+            <label htmlFor="checkbox" className={style.checkBoxTitle}>
+              Запомнить пароль
+            </label>
           </div>
           <button className={style.restoreButton}>Восстановить</button>
           <div className={style.enterModal__form__buttons__wrap}>
