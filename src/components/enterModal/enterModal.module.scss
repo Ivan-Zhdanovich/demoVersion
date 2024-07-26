@@ -19,6 +19,7 @@
 .closeIcon {
   margin-top: 20px;
   margin-left: 410px;
+  cursor: pointer;
 }
 
 .enterModal__title {
@@ -40,6 +41,7 @@
   align-items: center;
   width: 452px;
   height: 74px;
+  border: none;
   border-radius: 10px;
   color: rgba(31, 66, 132, 1);
   background-color: rgba(215, 226, 246, 1);

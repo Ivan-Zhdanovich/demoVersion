@@ -12,15 +12,23 @@ export const EnterModal = ({ open, close }: IEnterModal) => {
         className={style.enterModalWrap}
       >
         <div className={style.enterModalContainer}>
-          <CloseCrossIcon classNames={style.closeIcon} />
+          <div onClick={close}>
+            <CloseCrossIcon classNames={style.closeIcon} />
+          </div>
           <h1 className={style.enterModal__title}>Войти в систему</h1>
           <form onSubmit={() => {}} className={style.enterModal__form}>
-            <label htmlFor="emailPhone" className={style.enterModal__form__row}>
-              Email/Телефон
-            </label>
-            <label htmlFor="password" className={style.enterModal__form__row}>
-              Пароль
-            </label>
+            <input
+              id="EmailPhone"
+              type="text"
+              className={style.enterModal__form__row}
+              placeholder=" Email/Телефон"
+            />
+            <input
+              id="Password"
+              type="password"
+              className={style.enterModal__form__row}
+              placeholder="Пароль"
+            />
           </form>
           <div className={style.checkboxWrap}>
             <CheckboxIcon classNames={style.checkboxIcon} />
